@@ -1,0 +1,46 @@
+# =====================
+# Python (Flask Backend in Server/)
+# =====================
+Server/__pycache__/
+Server/*.pyc
+Server/*.pyo
+Server/*.pyd
+Server/.env
+Server/env/
+Server/venv/
+Server/ENV/
+Server/.VENV/
+Server/instance/
+Server/uploads/
+Server/.DS_Store
+Server/*.db
+Server/*.sqlite3
+Server/.token*
+
+# =====================
+# React (Frontend in Docify-RAG/)
+# =====================
+Docify-RAG/node_modules/
+Docify-RAG/dist/
+Docify-RAG/.vite/
+Docify-RAG/.env
+Docify-RAG/.DS_Store
+
+# =====================
+# macOS
+# =====================
+.DS_Store
+
+# =====================
+# General
+# =====================
+*.log
+*.swp
+*.bak
+*.tmp
+*.orig
+
+# =====================
+# VSCode
+# =====================
+.vscode/

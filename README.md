@@ -18,6 +18,19 @@ Docify-RAG is a full-stack AI-powered chatbot that lets you upload any PDF file 
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](./public/image1.png)
+
+### 📤 File Upload
+![File Upload](./public/image2.png)
+
+### 💬 Chat Interface
+![Chat Interface](./public/image3.png)
+
+---
+
 ## 📁 Folder Structure
 
 ```

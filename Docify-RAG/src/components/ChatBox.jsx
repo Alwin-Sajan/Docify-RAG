@@ -30,27 +30,38 @@ export default function ChatBox() {
   };
 
   return (
-    <div className="space-y-4">
-      <div className="border p-4 h-64 overflow-y-scroll bg-gray-100">
+    <div className="space-y-4 p-6 bg-white rounded-xl shadow-xl">
+      {/* Chat Log */}
+      <div className="border p-4 h-72 overflow-y-scroll bg-gray-50 rounded-xl space-y-4">
         {chatLog.map((entry, idx) => (
-          <div key={idx} className="mb-2">
-            <p><strong>You:</strong> {entry.user}</p>
-            <p><strong>Bot:</strong> {entry.bot}</p>
+          <div key={idx} className="space-y-2">
+            <div className="text-sm text-gray-700">
+              <strong>You:</strong> <span>{entry.user}</span>
+            </div>
+            <div className="text-sm text-gray-900 font-medium bg-indigo-100 p-2 rounded-lg">
+              <strong>Bot:</strong> <span>{entry.bot}</span>
+            </div>
           </div>
         ))}
-        {loading && <p><em>Bot is typing...</em></p>}
+        {loading && (
+          <div className="flex justify-center mt-4 text-gray-500">
+            <em>Bot is typing...</em>
+          </div>
+        )}
       </div>
-      <div className="flex gap-2">
+
+      {/* User Input and Send Button */}
+      <div className="flex gap-2 items-center">
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="flex-1 border p-2"
+          className="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
           placeholder="Ask something..."
           onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
         />
         <button
           onClick={sendMessage}
-          className="bg-green-500 text-white px-4 py-2 rounded"
+          className="bg-gradient-to-r from-indigo-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:scale-105 transition-all duration-300"
           disabled={loading}
         >
           {loading ? 'Sending...' : 'Send'}
